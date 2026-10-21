@@ -7,13 +7,23 @@ PURPLE="\033[0;35m"
 CYAN="\033[0;36m"
 RES="\033[0m"
 
+function os {
+  clear
+  if [ -e /etc/os-release ]; then
+    source /etc/os-release
+    OS=$ID
+    echo " you are on $OS :) nice"
+    sleep 1
+  else
+  echo "os not found"
+fi
+}
 
-
-echo " "
+echo ""
 echo ""
 function assci {
   clear
-  printf "                   ________________\n"
+  printf "${CYAN}                   ________________\n"
   printf "        .--.       |              |\n"
   printf "       |o_o |      |              |\n"
   printf "       |:_/ |      |              |\n"
@@ -22,13 +32,18 @@ function assci {
   printf "    /'\\_   _/ \`\\   | 3 : Exit     |\n"
   printf "    \\___)=(___/    |______________|\n"
   printf "\n"
-  printf "\n"
+  printf "${RES}\n"
 
 }
 
+if [ "$1" = "-z" ];
+then
+  assci
+else
+  os
+  assci
+fi
 
-
-assci
 #read -p "Rentre l option : " option
 while true; do
   read -p "Enter the option : " option

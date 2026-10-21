@@ -13,17 +13,17 @@ echo " "
 echo ""
 function assci {
   clear
-  cat << "EOF" 
-                 ________________
-        .--.     |              |
-       |o_o |    |              |
-       |:_/ |    |              |
-      //   \ \   |              |
-     (|     | )  |              |
-    /'\_   _/`\  | 3 : Exit     |
-    \___)=(___/  |______________|
+  printf "                   ________________\n"
+  printf "        .--.       |              |\n"
+  printf "       |o_o |      |              |\n"
+  printf "       |:_/ |      |              |\n"
+  printf "      //   \\ \\     |              |\n"
+  printf "     (|     | )    |              |\n"
+  printf "    /'\\_   _/ \`\\   | 3 : Exit     |\n"
+  printf "    \\___)=(___/    |______________|\n"
+  printf "\n"
+  printf "\n"
 
-EOF
 }
 
 

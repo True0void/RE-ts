@@ -1,0 +1,9 @@
+ltrace
+strings
+file
+exiftool
+xxd
+objdump
+nm
+strace
+gdb

@@ -23,11 +23,11 @@ echo ""
 echo ""
 function assci {
   clear
-  printf "${CYAN}                   ________________\n"
-  printf "        .--.       |              |\n"
-  printf "       |o_o |      |              |\n"
+  printf "${CYAN}                   \n"
+  printf "        .--.       ________________\n"
+  printf "       |o_o |      | 1 : app-re   |\n"
   printf "       |:_/ |      |              |\n"
-  printf "      //   \\ \\     |              |\n"
+  printf "      //   \\ \\     | 2 : Debug    |\n"
   printf "     (|     | )    |              |\n"
   printf "    /'\\_   _/ \`\\   | 3 : Exit     |\n"
   printf "    \\___)=(___/    |______________|\n"
@@ -44,12 +44,29 @@ else
   assci
 fi
 
+
+function script1 {
+  while true ; do
+    read -p "give the path of the target : " script
+    if [ -z "$script" ]; then
+      echo "give me a script :( "
+    else
+      if [ -f "$script" ];then
+        file "$script"
+      else
+        echo "erreur !"
+      fi
+    fi
+  done
+}
+
+
 #read -p "Rentre l option : " option
 while true; do
   read -p "Enter the option : " option
 case $option in 
   1)
-    echo "1"
+    script1
     ;;
   2)
     echo "2"

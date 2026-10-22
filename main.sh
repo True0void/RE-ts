@@ -53,6 +53,9 @@ function script1 {
     else
       if [ -f "$script" ];then
         file "$script"
+        sleep 2
+        strings "$script" | head -n 20
+        
       else
         echo "erreur !"
       fi

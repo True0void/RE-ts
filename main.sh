@@ -57,7 +57,7 @@ function script1 {
         strings "$script" | head -n 20
         
       else
-        echo "erreur !"
+        echo "error !"
       fi
     fi
   done

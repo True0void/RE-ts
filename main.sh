@@ -12,7 +12,7 @@ function os {
   if [ -e /etc/os-release ]; then
     source /etc/os-release
     OS=$ID
-    echo " you are on $OS :) nice"
+    echo " you are on $OS "
     sleep 1
   else
   echo "os not found"
